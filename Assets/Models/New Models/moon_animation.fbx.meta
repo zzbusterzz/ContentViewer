@@ -1,49 +1,37 @@
 fileFormatVersion: 2
-guid: 5a4f6afebcb19964f9d43955c725d069
+guid: 14206ca2f38e02248b3ac0f1534fc1f2
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: body1
-    100002: esophagus
-    100004: haslet
-    100006: large_intestine
-    100008: liver
-    100010: oral
-    100012: small_intestine
-    100014: stomach
-    100016: //RootNode
-    400000: body1
-    400002: esophagus
-    400004: haslet
-    400006: large_intestine
-    400008: liver
-    400010: oral
-    400012: small_intestine
-    400014: stomach
-    400016: //RootNode
-    2100000: body
-    2100002: DigestiveSystem_diffuse
-    2300000: body1
-    2300002: esophagus
-    2300004: large_intestine
-    2300006: liver
-    2300008: oral
-    2300010: small_intestine
-    2300012: stomach
-    3300000: body1
-    3300002: esophagus
-    3300004: large_intestine
-    3300006: liver
-    3300008: oral
-    3300010: small_intestine
-    3300012: stomach
-    4300000: body1
-    4300002: oral
-    4300004: large_intestine
-    4300006: small_intestine
-    4300008: stomach
-    4300010: liver
-    4300012: esophagus
+    100000: earth
+    100002: moon
+    100004: moon 1
+    100006: //RootNode
+    100008: moon_axis
+    100010: moon_orbit
+    100012: moon_phase
+    100014: nurbsCircle1
+    400000: earth
+    400002: moon
+    400004: moon 1
+    400006: //RootNode
+    400008: moon_axis
+    400010: moon_orbit
+    400012: moon_phase
+    400014: nurbsCircle1
+    2100000: blinn1
+    2100002: kx_cl_moon_map
+    2100004: Default_Material
+    2300000: moon 1
+    2300002: moon_axis
+    2300004: moon_orbit
+    3300000: moon 1
+    3300002: moon_axis
+    3300004: moon_orbit
+    4300000: moon_orbit
+    4300002: moon
+    4300004: moon_axis
+    7400000: Take 001
     9500000: //RootNode
   externalObjects: {}
   materials:
@@ -72,7 +60,35 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 2760
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -97,14 +113,14 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
+    previousCalculatedGlobalScale: 0.01
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   importAnimation: 1

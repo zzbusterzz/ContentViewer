@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ButtonControlTop : MonoBehaviour {
     public Text ChapterName;
+
+    public Image backgroundBG;
 
     public Slider VolumeSlider;
 
@@ -23,12 +25,22 @@ public class ButtonControlTop : MonoBehaviour {
 
     private bool isButtonRotatePressed = false;
 
+    void Awake()
+    {
+        InititaliseUI();
+    }
+
     private void Start()
     {
         VolumeSlider.onValueChanged.AddListener(OnVolumeChange);
 
         ChapterName.text = SceneManager.GetActiveScene().name;
         VolumeSlider.value = PlayerPrefs.GetFloat("Volume", 1);   
+    }
+
+    void InititaliseUI()
+    {
+
     }
 
     public void OnVolumeChange(float value)
@@ -90,7 +102,7 @@ public class ButtonControlTop : MonoBehaviour {
 
     public void OnToggleSettingsWindow()
     {
-
+       
     }
 
     private void Update()
@@ -101,3 +113,5 @@ public class ButtonControlTop : MonoBehaviour {
         }
     }
 }
+
+
