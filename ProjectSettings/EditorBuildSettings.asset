@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scene/Working Principle of Combustion Engine.unity
+    path: "Assets/Scene/\u5185\u71C3\u673A\u7684\u5DE5\u4F5C\u539F\u7406.unity"
     guid: c17f9428b977a06429edabfa7825ec35
   - enabled: 1
     path: Assets/Scene/DigestiveSystem.unity
@@ -14,3 +14,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene/MoonPhase.unity
     guid: f2381505d659ad449bc6bbb4fdccdd39
+  m_configObjects: {}

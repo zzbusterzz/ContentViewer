@@ -1,9 +1,18 @@
-﻿using UnityEngine;
+﻿using Assets.SimpleLocalization;
+using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+
+public enum SupportedLanguges
+{
+    English,
+    Chinese
+}
 
 public class ButtonControlTop : MonoBehaviour {
-    public Text ChapterName;
+
+    public SupportedLanguges currentLanguage = SupportedLanguges.Chinese;
+
+    public Image backgroundBG;
 
     public Slider VolumeSlider;
 
@@ -23,12 +32,41 @@ public class ButtonControlTop : MonoBehaviour {
 
     private bool isButtonRotatePressed = false;
 
+    void Awake()
+    {
+        InititaliseUI();
+
+        switch (currentLanguage)
+        {
+            case SupportedLanguges.English:
+                SetLocalization("English");
+                break;
+
+            case SupportedLanguges.Chinese:
+                SetLocalization("Chinese");
+                break;
+        }
+    }
+
     private void Start()
     {
         VolumeSlider.onValueChanged.AddListener(OnVolumeChange);
 
-        ChapterName.text = SceneManager.GetActiveScene().name;
-        VolumeSlider.value = PlayerPrefs.GetFloat("Volume", 1);   
+        VolumeSlider.value = PlayerPrefs.GetFloat("Volume", 1); 
+    }
+
+    /// <summary>
+    /// Change localization at runtime
+    /// </summary>
+    public void SetLocalization(string localization)
+    {
+        LocalizationManager.Language = localization;
+    }
+
+
+    void InititaliseUI()
+    {
+
     }
 
     public void OnVolumeChange(float value)
@@ -90,7 +128,7 @@ public class ButtonControlTop : MonoBehaviour {
 
     public void OnToggleSettingsWindow()
     {
-
+       
     }
 
     private void Update()
@@ -101,3 +139,5 @@ public class ButtonControlTop : MonoBehaviour {
         }
     }
 }
+
+

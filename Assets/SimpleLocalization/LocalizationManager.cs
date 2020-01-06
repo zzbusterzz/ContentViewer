@@ -78,7 +78,8 @@ namespace Assets.SimpleLocalization
                 }
             }
 
-            AutoLanguage();
+            if(Language == null)
+                AutoLanguage();//Enable only if language is not set
         }
 
 		/// <summary>
