@@ -112,25 +112,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &276284437 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1748856310195858, guid: 6aaf39639a929dd46978df5244ebbb7c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1799605360}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &276284438
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 276284437}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2404a37f3bd75444aa4ad05d0f228347, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LocalizationKey: SceneEngine.1
 --- !u!1 &612907385
 GameObject:
   m_ObjectHideFlags: 0
@@ -874,6 +855,21 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1585148132936481456, guid: 6aaf39639a929dd46978df5244ebbb7c,
+        type: 3}
+      propertyPath: LocalizationKey
+      value: SceneEngine.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7138186922140334262, guid: 6aaf39639a929dd46978df5244ebbb7c,
+        type: 3}
+      propertyPath: LocalizationKey
+      value: SceneEngine.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8455814450110772440, guid: 6aaf39639a929dd46978df5244ebbb7c,
+        type: 3}
+      propertyPath: LocalizationKey
+      value: SceneEngine.3
+      objectReference: {fileID: 0}
     - target: {fileID: 224085019790308576, guid: 6aaf39639a929dd46978df5244ebbb7c,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -1108,6 +1104,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: "4th  stroke\r"
       objectReference: {fileID: 0}
+    - target: {fileID: 7072928149770917051, guid: 6aaf39639a929dd46978df5244ebbb7c,
+        type: 3}
+      propertyPath: LocalizationKey
+      value: SceneEngine.6
+      objectReference: {fileID: 0}
     - target: {fileID: 114226011778238324, guid: 6aaf39639a929dd46978df5244ebbb7c,
         type: 3}
       propertyPath: m_Text
@@ -1128,10 +1129,20 @@ PrefabInstance:
       propertyPath: m_Text
       value: "3rd  stroke\r"
       objectReference: {fileID: 0}
+    - target: {fileID: 2958230430092365418, guid: 6aaf39639a929dd46978df5244ebbb7c,
+        type: 3}
+      propertyPath: LocalizationKey
+      value: SceneEngine.5
+      objectReference: {fileID: 0}
     - target: {fileID: 114441637056680072, guid: 6aaf39639a929dd46978df5244ebbb7c,
         type: 3}
       propertyPath: m_Text
       value: "\u7B2C\u4E8C\u51B2\u7A0B"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1557493740465735811, guid: 6aaf39639a929dd46978df5244ebbb7c,
+        type: 3}
+      propertyPath: LocalizationKey
+      value: SceneEngine.4
       objectReference: {fileID: 0}
     - target: {fileID: 114165960901645196, guid: 6aaf39639a929dd46978df5244ebbb7c,
         type: 3}
@@ -1169,101 +1180,6 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
---- !u!1 &1799605363 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1268967614347674, guid: 6aaf39639a929dd46978df5244ebbb7c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1799605360}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1799605364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1799605363}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2404a37f3bd75444aa4ad05d0f228347, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LocalizationKey: SceneEngine.2
---- !u!1 &1799605365 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1157972348695630, guid: 6aaf39639a929dd46978df5244ebbb7c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1799605360}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1799605366 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1566448333845094, guid: 6aaf39639a929dd46978df5244ebbb7c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1799605360}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1799605367 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1869586483168646, guid: 6aaf39639a929dd46978df5244ebbb7c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1799605360}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1799605368 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1911803930303738, guid: 6aaf39639a929dd46978df5244ebbb7c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1799605360}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1799605369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1799605365}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2404a37f3bd75444aa4ad05d0f228347, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LocalizationKey: SceneEngine.6
---- !u!114 &1799605370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1799605366}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2404a37f3bd75444aa4ad05d0f228347, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LocalizationKey: SceneEngine.5
---- !u!114 &1799605371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1799605367}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2404a37f3bd75444aa4ad05d0f228347, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LocalizationKey: SceneEngine.4
---- !u!114 &1799605372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1799605368}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2404a37f3bd75444aa4ad05d0f228347, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LocalizationKey: SceneEngine.3
 --- !u!1 &1909054451 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100036, guid: b9d88da8755a3c740847d88364366730,

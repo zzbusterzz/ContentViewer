@@ -46,7 +46,8 @@ public class DigestiveSystemModelHandler : ModelHandler
     {
         DigestiveSystem,
         OralCavity,
-        Oesophagus,        Stomach,
+        Oesophagus,
+        Stomach,
         Small_intestine,
         Large_intestine,
         Short_animation

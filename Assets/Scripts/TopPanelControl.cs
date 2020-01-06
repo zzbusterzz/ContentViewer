@@ -16,7 +16,7 @@ public class TopPanelControl : MonoBehaviour
   
     void InitialiseUI()
     {        
-        //topBG.sprite = CommonUIComponents.instance.uIAtlas.GetSprite("topBarBG");//problem here need to fix image
+        topBG.sprite = CommonUIComponents.instance.uIAtlas.GetSprite("topBarBG");//problem here need to fix image
         iconImage.sprite = CommonUIComponents.instance.uIAtlas.GetSprite("naughtylogo公司logo");
         close.image.sprite = CommonUIComponents.instance.uIAtlas.GetSprite("close关闭");
         restore.image.sprite = CommonUIComponents.instance.uIAtlas.GetSprite("restore最大化");
