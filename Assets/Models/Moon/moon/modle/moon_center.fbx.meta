@@ -1,44 +1,26 @@
 fileFormatVersion: 2
-guid: 2a04aa9ef32bb094fbacb2e5ba5f5aba
-timeCreated: 1532265288
-licenseType: Free
+guid: bca9090ee031dbe4eb9786cac3e123c9
 ModelImporter:
-  serializedVersion: 22
+  serializedVersion: 23
   fileIDToRecycleName:
-    100000: earth
-    100002: earth 1
-    100004: earth_axis
-    100006: //RootNode
-    100008: moon
-    100010: moon 1
-    100012: moon_axis
-    100014: moon_orbit
-    400000: earth
-    400002: earth 1
-    400004: earth_axis
-    400006: //RootNode
-    400008: moon
-    400010: moon 1
-    400012: moon_axis
-    400014: moon_orbit
-    2100000: blinn1
-    2100002: kx_cl_moon_map
-    2100004: dl_xq_dq
-    2300000: earth 1
-    2300002: earth_axis
-    2300004: moon 1
-    2300006: moon_axis
-    2300008: moon_orbit
-    3300000: earth 1
-    3300002: earth_axis
-    3300004: moon 1
-    3300006: moon_axis
-    3300008: moon_orbit
-    4300000: moon_orbit
-    4300002: moon
-    4300004: moon_axis
-    4300006: earth
-    4300008: earth_axis
+    100000: group2
+    100002: moon
+    100004: moon 1
+    100006: moon_axis
+    100008: //RootNode
+    400000: group2
+    400002: moon
+    400004: moon 1
+    400006: moon_axis
+    400008: //RootNode
+    2100000: kx_cl_moon_map
+    2100002: blinn1
+    2300000: moon 1
+    2300002: moon_axis
+    3300000: moon 1
+    3300002: moon_axis
+    4300000: moon
+    4300002: moon_axis
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -58,6 +40,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -72,6 +55,7 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -89,11 +73,16 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
@@ -108,7 +97,6 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1

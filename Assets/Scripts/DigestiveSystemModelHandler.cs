@@ -64,12 +64,6 @@ public class DigestiveSystemModelHandler : ModelHandler
         ButtonOnePressed(FirstButtonToSelect);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     /// <summary>
     /// Show All digestive system
     /// </summary>

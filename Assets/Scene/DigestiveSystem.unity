@@ -365,7 +365,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeModel: {fileID: 0}
   AnimationClipPlayer: {fileID: 0}
-  rotateMultiplier: 5
+  rotateMultiplier: 0.75
   FirstButtonToSelect: {fileID: 1243278517}
   NormalTransition:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
@@ -876,6 +876,21 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1585148132936481456, guid: 6aaf39639a929dd46978df5244ebbb7c,
+        type: 3}
+      propertyPath: LocalizationKey
+      value: SceneAnatomy.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7138186922140334262, guid: 6aaf39639a929dd46978df5244ebbb7c,
+        type: 3}
+      propertyPath: LocalizationKey
+      value: SceneAnatomy.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8455814450110772440, guid: 6aaf39639a929dd46978df5244ebbb7c,
+        type: 3}
+      propertyPath: LocalizationKey
+      value: SceneAnatomy.3
+      objectReference: {fileID: 0}
     - target: {fileID: 224085019790308576, guid: 6aaf39639a929dd46978df5244ebbb7c,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -1013,11 +1028,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1138788710}
-    - target: {fileID: 114737659171107776, guid: 6aaf39639a929dd46978df5244ebbb7c,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1138788710}
     - target: {fileID: 114649153610351032, guid: 6aaf39639a929dd46978df5244ebbb7c,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1043,20 +1053,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1585148132936481456, guid: 6aaf39639a929dd46978df5244ebbb7c,
-        type: 3}
-      propertyPath: LocalizationKey
-      value: SceneAnatomy.1
-      objectReference: {fileID: 0}
     - target: {fileID: 7072928149770917051, guid: 6aaf39639a929dd46978df5244ebbb7c,
         type: 3}
       propertyPath: LocalizationKey
       value: SceneAnatomy.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7138186922140334262, guid: 6aaf39639a929dd46978df5244ebbb7c,
-        type: 3}
-      propertyPath: LocalizationKey
-      value: SceneAnatomy.2
       objectReference: {fileID: 0}
     - target: {fileID: 2958230430092365418, guid: 6aaf39639a929dd46978df5244ebbb7c,
         type: 3}
@@ -1068,11 +1068,11 @@ PrefabInstance:
       propertyPath: LocalizationKey
       value: SceneAnatomy.4
       objectReference: {fileID: 0}
-    - target: {fileID: 8455814450110772440, guid: 6aaf39639a929dd46978df5244ebbb7c,
+    - target: {fileID: 114737659171107776, guid: 6aaf39639a929dd46978df5244ebbb7c,
         type: 3}
-      propertyPath: LocalizationKey
-      value: SceneAnatomy.3
-      objectReference: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1138788710}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6aaf39639a929dd46978df5244ebbb7c, type: 3}
 --- !u!1 &2028485934 stripped

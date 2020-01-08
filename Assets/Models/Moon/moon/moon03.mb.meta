@@ -1,43 +1,9 @@
 fileFormatVersion: 2
-guid: c4118da2aafaed946bc474ec5fba042c
+guid: f7d3d278be0e7ad41abc256f17eeb742
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: earth
-    100002: earth 1
-    100004: earth_axis
-    100006: moon
-    100008: //RootNode
-    100010: moon 1
-    100012: moon_axis
-    100014: moon_orbit
-    400000: earth
-    400002: earth 1
-    400004: earth_axis
-    400006: moon
-    400008: //RootNode
-    400010: moon 1
-    400012: moon_axis
-    400014: moon_orbit
-    2100000: blinn1
-    2100002: kx_cl_moon_map
-    2100004: dl_xq_dq
-    2300000: earth 1
-    2300002: earth_axis
-    2300004: moon 1
-    2300006: moon_axis
-    2300008: moon_orbit
-    3300000: earth 1
-    3300002: earth_axis
-    3300004: moon 1
-    3300006: moon_axis
-    3300008: moon_orbit
-    4300000: moon_orbit
-    4300002: moon
-    4300004: moon_axis
-    4300006: earth
-    4300008: earth_axis
-    9500000: //RootNode
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -91,13 +57,13 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   importAnimation: 1

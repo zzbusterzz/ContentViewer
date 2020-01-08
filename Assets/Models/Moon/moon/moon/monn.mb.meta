@@ -1,26 +1,9 @@
 fileFormatVersion: 2
-guid: 981a94445f05fad41adea580c86d29c5
+guid: c0b3265e593c49341a1b2889b76f8fd6
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: group2
-    100002: moon
-    100004: //RootNode
-    100006: moon 1
-    100008: moon_axis
-    400000: group2
-    400002: moon
-    400004: //RootNode
-    400006: moon 1
-    400008: moon_axis
-    2100000: kx_cl_moon_map
-    2100002: blinn1
-    2300000: moon 1
-    2300002: moon_axis
-    3300000: moon 1
-    3300002: moon_axis
-    4300000: moon
-    4300002: moon_axis
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -101,7 +84,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

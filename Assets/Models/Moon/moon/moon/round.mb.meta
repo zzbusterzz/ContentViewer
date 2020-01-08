@@ -1,16 +1,9 @@
 fileFormatVersion: 2
-guid: 7d250d7d57d7cd9459668b19e3841e80
+guid: 8c24cf046ac6e814b832c2287e7d6a13
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: moon_orbit
-    100002: //RootNode
-    400000: moon_orbit
-    400002: //RootNode
-    2100000: blinn1
-    2300000: moon_orbit
-    3300000: moon_orbit
-    4300000: moon_orbit
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -91,7 +84,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

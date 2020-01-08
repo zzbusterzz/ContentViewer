@@ -30,7 +30,7 @@ public class ButtonControlTop : MonoBehaviour {
     public Sprite VolumeButtonOn;
     public Sprite VolumeButtonOff;
 
-    private bool isButtonRotatePressed = false;
+    private bool autoRotate = true;
 
     void Awake()
     {
@@ -66,7 +66,7 @@ public class ButtonControlTop : MonoBehaviour {
 
     void InititaliseUI()
     {
-
+        OnToggleAutoRotate();//Disables autorotate initially
     }
 
     public void OnVolumeChange(float value)
@@ -96,15 +96,20 @@ public class ButtonControlTop : MonoBehaviour {
         VolumeControl.UpdateVolumeSettings();
     }
 
-    public void OnRotateModelDown()
+    public void OnToggleAutoRotate()
     {
-        isButtonRotatePressed = true;
+        autoRotate = !autoRotate;
+
+        if (autoRotate)
+        {
+            RotateModel.image.sprite = CommonUIComponents.instance.uIAtlas.GetSprite("1rotatetouch旋转");
+        }
+        else
+        {
+            RotateModel.image.sprite = CommonUIComponents.instance.uIAtlas.GetSprite("2rotate旋转");
+        }
     }
 
-    public void OnRotateModelUp()
-    {
-        isButtonRotatePressed = false;
-    }
 
     public void OnToggleLabel()
     {
@@ -133,11 +138,9 @@ public class ButtonControlTop : MonoBehaviour {
 
     private void Update()
     {
-        if (isButtonRotatePressed)
+        if (autoRotate && ModelHandler != null)
         {
             ModelHandler.RotateModel();
         }
     }
 }
-
-

@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 
 public class VolumeControl : MonoBehaviour {
     public AudioSource[] audioSources;///Add audio listeners for each scene

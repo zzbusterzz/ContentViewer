@@ -1,25 +1,26 @@
 fileFormatVersion: 2
-guid: 3ddc406562d034543927d33c82c7b9c2
+guid: 505c2f3f58a19a646a513125d60054d2
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: earth
-    100002: earth 1
-    100004: //RootNode
+    100002: //RootNode
+    100004: earth 1
     100006: earth_axis
+    100008: group1
     400000: earth
-    400002: earth 1
-    400004: //RootNode
+    400002: //RootNode
+    400004: earth 1
     400006: earth_axis
+    400008: group1
     2100000: dl_xq_dq
-    2100002: blinn2
+    2100002: blinn1
     2300000: earth 1
     2300002: earth_axis
     3300000: earth 1
     3300002: earth_axis
     4300000: earth
     4300002: earth_axis
-    7400000: Take 001
     9500000: //RootNode
   externalObjects: {}
   materials:
@@ -73,7 +74,7 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
+    previousCalculatedGlobalScale: 1
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
