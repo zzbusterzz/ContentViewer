@@ -30,11 +30,13 @@ public class ButtonControlTop : MonoBehaviour {
     public Sprite VolumeButtonOn;
     public Sprite VolumeButtonOff;
 
+    public DisplayInstructions InstructionPanel;
+
     private bool autoRotate = true;
 
     void Awake()
     {
-        InititaliseUI();
+        
 
         switch (currentLanguage)
         {
@@ -52,7 +54,9 @@ public class ButtonControlTop : MonoBehaviour {
     {
         VolumeSlider.onValueChanged.AddListener(OnVolumeChange);
 
-        VolumeSlider.value = PlayerPrefs.GetFloat("Volume", 1); 
+        VolumeSlider.value = PlayerPrefs.GetFloat("Volume", 1);
+
+        InititaliseUI();    
     }
 
     /// <summary>
@@ -128,7 +132,11 @@ public class ButtonControlTop : MonoBehaviour {
 
     public void OnToggleInstructions()
     {
-        //Do nothing
+        InstructionPanel.gameObject.SetActive(!InstructionPanel.gameObject.activeInHierarchy);
+        if (InstructionPanel.gameObject.activeInHierarchy)
+        {
+            InstructionPanel.DisplayInstructionsOnPanel();
+        }
     }
 
     public void OnToggleSettingsWindow()

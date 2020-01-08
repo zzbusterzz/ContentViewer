@@ -1,11 +1,9 @@
-﻿using UnityEditor.Animations;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class ButtonControlPlayVideo : MonoBehaviour
 {
     public Animator animator;//Aassign controlllelr here which willl handle animation of the model
-    public AnimatorController controller;
 
     public Image bgImage;
     public Button PlayPauseButton;
@@ -96,7 +94,7 @@ public class ButtonControlPlayVideo : MonoBehaviour
 
     private void Update()
     {
-        if (isPlaying & !isDragging)
+        if (isPlaying & !isDragging && animator != null)
         {
             VideoSlider.value = animator.GetCurrentAnimatorStateInfo(0).normalizedTime%1;
             //  Debug.Log("vallue : " + animator.GetCurrentAnimatorStateInfo(0).normalizedTime%1);
