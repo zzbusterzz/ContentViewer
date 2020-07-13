@@ -1,9 +1,16 @@
-﻿using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using Assets.SimpleLocalization;
+using UnityEngine;
 using UnityEngine.UI;
 
+public enum SupportedLanguges
+{
+    English,
+    Chinese
+}
+
 public class ButtonControlTop : MonoBehaviour {
-    public Text ChapterName;
+
+    public SupportedLanguges currentLanguage = SupportedLanguges.Chinese;
 
     public Image backgroundBG;
 
@@ -23,24 +30,47 @@ public class ButtonControlTop : MonoBehaviour {
     public Sprite VolumeButtonOn;
     public Sprite VolumeButtonOff;
 
-    private bool isButtonRotatePressed = false;
+    public DisplayInstructions InstructionPanel;
+
+    private bool autoRotate = true;
 
     void Awake()
     {
-        InititaliseUI();
+        
+
+        switch (currentLanguage)
+        {
+            case SupportedLanguges.English:
+                SetLocalization("English");
+                break;
+
+            case SupportedLanguges.Chinese:
+                SetLocalization("Chinese");
+                break;
+        }
     }
 
     private void Start()
     {
         VolumeSlider.onValueChanged.AddListener(OnVolumeChange);
 
-        ChapterName.text = SceneManager.GetActiveScene().name;
-        VolumeSlider.value = PlayerPrefs.GetFloat("Volume", 1);   
+        VolumeSlider.value = PlayerPrefs.GetFloat("Volume", 1);
+
+        InititaliseUI();    
     }
+
+    /// <summary>
+    /// Change localization at runtime
+    /// </summary>
+    public void SetLocalization(string localization)
+    {
+        LocalizationManager.Language = localization;
+    }
+
 
     void InititaliseUI()
     {
-
+        OnToggleAutoRotate();//Disables autorotate initially
     }
 
     public void OnVolumeChange(float value)
@@ -70,15 +100,20 @@ public class ButtonControlTop : MonoBehaviour {
         VolumeControl.UpdateVolumeSettings();
     }
 
-    public void OnRotateModelDown()
+    public void OnToggleAutoRotate()
     {
-        isButtonRotatePressed = true;
+        autoRotate = !autoRotate;
+
+        if (autoRotate)
+        {
+            RotateModel.image.sprite = CommonUIComponents.instance.uIAtlas.GetSprite("1rotatetouch旋转");
+        }
+        else
+        {
+            RotateModel.image.sprite = CommonUIComponents.instance.uIAtlas.GetSprite("2rotate旋转");
+        }
     }
 
-    public void OnRotateModelUp()
-    {
-        isButtonRotatePressed = false;
-    }
 
     public void OnToggleLabel()
     {
@@ -97,7 +132,11 @@ public class ButtonControlTop : MonoBehaviour {
 
     public void OnToggleInstructions()
     {
-        //Do nothing
+        InstructionPanel.gameObject.SetActive(!InstructionPanel.gameObject.activeInHierarchy);
+        if (InstructionPanel.gameObject.activeInHierarchy)
+        {
+            InstructionPanel.DisplayInstructionsOnPanel();
+        }
     }
 
     public void OnToggleSettingsWindow()
@@ -107,11 +146,9 @@ public class ButtonControlTop : MonoBehaviour {
 
     private void Update()
     {
-        if (isButtonRotatePressed)
+        if (autoRotate && ModelHandler != null)
         {
             ModelHandler.RotateModel();
         }
     }
 }
-
-

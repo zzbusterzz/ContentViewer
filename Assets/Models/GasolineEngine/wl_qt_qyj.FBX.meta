@@ -1,0 +1,665 @@
+fileFormatVersion: 2
+guid: 23059be5ab373f54e99733097dd737fd
+timeCreated: 1522720144
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Bone621
+    100002: Bone622
+    100004: Bone623
+    100006: Bone624
+    100008: Bone625
+    100010: Bone626
+    100012: Bone627
+    100014: Bone628
+    100016: Bone629
+    100018: Bone630
+    100020: Bone631
+    100022: Bone632
+    100024: Bone633
+    100026: Bone634
+    100028: Bone635
+    100030: Bone636
+    100032: Bone637
+    100034: Bone638
+    100036: Bone639
+    100038: Bone640
+    100040: Bone641
+    100042: Bone642
+    100044: Bone643
+    100046: Bone644
+    100048: Bone645
+    100050: Bone646
+    100052: Bone647
+    100054: Bone648
+    100056: Bone649
+    100058: Bone650
+    100060: Bone651
+    100062: Bone652
+    100064: Bone653
+    100066: Bone654
+    100068: Bone655
+    100070: Bone656
+    100072: Bone657
+    100074: Bone658
+    100076: Bone659
+    100078: Bone660
+    100080: Bone661
+    100082: Bone662
+    100084: Bone663
+    100086: Bone664
+    100088: Bone665
+    100090: Bone666
+    100092: Bone667
+    100094: Bone668
+    100096: Bone669
+    100098: Bone670
+    100100: Bone671
+    100102: Bone672
+    100104: Bone673
+    100106: Bone674
+    100108: Bone675
+    100110: Bone676
+    100112: Bone677
+    100114: Bone678
+    100116: Bone679
+    100118: Bone680
+    100120: Bone681
+    100122: Bone682
+    100124: Bone683
+    100126: Bone684
+    100128: Bone685
+    100130: Bone686
+    100132: Bone687
+    100134: Bone688
+    100136: Bone689
+    100138: Bone690
+    100140: Bone691
+    100142: Bone692
+    100144: Bone693
+    100146: Bone694
+    100148: Bone695
+    100150: Bone696
+    100152: Bone697
+    100154: Bone698
+    100156: Bone699
+    100158: Bone700
+    100160: Bone701
+    100162: Bone702
+    100164: Bone703
+    100166: Bone704
+    100168: Bone705
+    100170: Bone706
+    100172: Bone707
+    100174: Bone708
+    100176: Bone709
+    100178: Bone710
+    100180: Bone711
+    100182: Bone712
+    100184: Bone713
+    100186: Bone714
+    100188: Bone715
+    100190: Bone716
+    100192: Bone717
+    100194: Bone718
+    100196: Bone719
+    100198: Bone720
+    100200: Bone721
+    100202: Bone722
+    100204: Bone723
+    100206: Dummy001
+    100208: Dummy002
+    100210: Dummy003
+    100212: Dummy006
+    100214: Dummy007
+    100216: Dummy012
+    100218: Dummy013
+    100220: Dummy015
+    100222: Dummy016
+    100224: Dummy020
+    100226: Dummy021
+    100228: Dummy023
+    100230: Dummy024
+    100232: Dummy025
+    100234: Dummy026
+    100236: Dummy027
+    100238: Dummy028
+    100240: Dummy029
+    100242: Dummy030
+    100244: Dummy031
+    100246: Dummy032
+    100248: Dummy033
+    100250: Dummy034
+    100252: Dummy035
+    100254: IK Chain005
+    100256: Line020
+    100258: //RootNode
+    100260: wl_qt_qyj01
+    100262: wl_qt_qyj02
+    100264: wl_qt_qyj_fm009
+    100266: wl_qt_qyj_fm010
+    100268: wl_qt_qyj_fm013
+    100270: wl_qt_qyj_fm014
+    100272: wl_qt_qyj_fm015
+    100274: wl_qt_qyj_fm016
+    100276: wl_qt_qyj_fm017
+    100278: wl_qt_qyj_fm018
+    100280: wl_qt_qyj_fy009
+    100282: wl_qt_qyj_fy01
+    100284: wl_qt_qyj_fy010
+    100286: wl_qt_qyj_fy011
+    100288: wl_qt_qyj_fy012
+    100290: wl_qt_qyj_fy013
+    100292: wl_qt_qyj_fy02
+    100294: wl_qt_qyj_fy05
+    100296: wl_qt_qyj_hs005
+    100298: wl_qt_qyj_hs008
+    100300: wl_qt_qyj_hs009
+    100302: wl_qt_qyj_hs03
+    100304: wl_qt_qyj_lz01
+    100306: wl_qt_qyj_lz02
+    100308: wl_qt_qyj_qg
+    100310: wl_qt_qyj_qz
+    100312: wl_qt_qyj_th009
+    100314: wl_qt_qyj_th010
+    100316: wl_qt_qyj_th011
+    100318: wl_qt_qyj_th013
+    100320: wl_qt_qyj_th014
+    100322: wl_qt_qyj_th015
+    100324: wl_qt_qyj_th016
+    100326: wl_qt_qyj_th04
+    100328: wl_qt_qyj_z005
+    100330: wl_qt_qyj_z008
+    100332: wl_qt_qyj_z009
+    100334: wl_qt_qyj_z03
+    100336: "\u56FE\u5F62007"
+    100338: "\u56FE\u5F62008"
+    100340: "\u56FE\u5F62009"
+    100342: "\u56FE\u5F62010"
+    100344: "\u56FE\u5F62011"
+    100346: "\u56FE\u5F62012"
+    100348: "\u56FE\u5F62013"
+    100350: "\u56FE\u5F62014"
+    100352: "\u5BF9\u8C61007"
+    400000: Bone621
+    400002: Bone622
+    400004: Bone623
+    400006: Bone624
+    400008: Bone625
+    400010: Bone626
+    400012: Bone627
+    400014: Bone628
+    400016: Bone629
+    400018: Bone630
+    400020: Bone631
+    400022: Bone632
+    400024: Bone633
+    400026: Bone634
+    400028: Bone635
+    400030: Bone636
+    400032: Bone637
+    400034: Bone638
+    400036: Bone639
+    400038: Bone640
+    400040: Bone641
+    400042: Bone642
+    400044: Bone643
+    400046: Bone644
+    400048: Bone645
+    400050: Bone646
+    400052: Bone647
+    400054: Bone648
+    400056: Bone649
+    400058: Bone650
+    400060: Bone651
+    400062: Bone652
+    400064: Bone653
+    400066: Bone654
+    400068: Bone655
+    400070: Bone656
+    400072: Bone657
+    400074: Bone658
+    400076: Bone659
+    400078: Bone660
+    400080: Bone661
+    400082: Bone662
+    400084: Bone663
+    400086: Bone664
+    400088: Bone665
+    400090: Bone666
+    400092: Bone667
+    400094: Bone668
+    400096: Bone669
+    400098: Bone670
+    400100: Bone671
+    400102: Bone672
+    400104: Bone673
+    400106: Bone674
+    400108: Bone675
+    400110: Bone676
+    400112: Bone677
+    400114: Bone678
+    400116: Bone679
+    400118: Bone680
+    400120: Bone681
+    400122: Bone682
+    400124: Bone683
+    400126: Bone684
+    400128: Bone685
+    400130: Bone686
+    400132: Bone687
+    400134: Bone688
+    400136: Bone689
+    400138: Bone690
+    400140: Bone691
+    400142: Bone692
+    400144: Bone693
+    400146: Bone694
+    400148: Bone695
+    400150: Bone696
+    400152: Bone697
+    400154: Bone698
+    400156: Bone699
+    400158: Bone700
+    400160: Bone701
+    400162: Bone702
+    400164: Bone703
+    400166: Bone704
+    400168: Bone705
+    400170: Bone706
+    400172: Bone707
+    400174: Bone708
+    400176: Bone709
+    400178: Bone710
+    400180: Bone711
+    400182: Bone712
+    400184: Bone713
+    400186: Bone714
+    400188: Bone715
+    400190: Bone716
+    400192: Bone717
+    400194: Bone718
+    400196: Bone719
+    400198: Bone720
+    400200: Bone721
+    400202: Bone722
+    400204: Bone723
+    400206: Dummy001
+    400208: Dummy002
+    400210: Dummy003
+    400212: Dummy006
+    400214: Dummy007
+    400216: Dummy012
+    400218: Dummy013
+    400220: Dummy015
+    400222: Dummy016
+    400224: Dummy020
+    400226: Dummy021
+    400228: Dummy023
+    400230: Dummy024
+    400232: Dummy025
+    400234: Dummy026
+    400236: Dummy027
+    400238: Dummy028
+    400240: Dummy029
+    400242: Dummy030
+    400244: Dummy031
+    400246: Dummy032
+    400248: Dummy033
+    400250: Dummy034
+    400252: Dummy035
+    400254: IK Chain005
+    400256: Line020
+    400258: //RootNode
+    400260: wl_qt_qyj01
+    400262: wl_qt_qyj02
+    400264: wl_qt_qyj_fm009
+    400266: wl_qt_qyj_fm010
+    400268: wl_qt_qyj_fm013
+    400270: wl_qt_qyj_fm014
+    400272: wl_qt_qyj_fm015
+    400274: wl_qt_qyj_fm016
+    400276: wl_qt_qyj_fm017
+    400278: wl_qt_qyj_fm018
+    400280: wl_qt_qyj_fy009
+    400282: wl_qt_qyj_fy01
+    400284: wl_qt_qyj_fy010
+    400286: wl_qt_qyj_fy011
+    400288: wl_qt_qyj_fy012
+    400290: wl_qt_qyj_fy013
+    400292: wl_qt_qyj_fy02
+    400294: wl_qt_qyj_fy05
+    400296: wl_qt_qyj_hs005
+    400298: wl_qt_qyj_hs008
+    400300: wl_qt_qyj_hs009
+    400302: wl_qt_qyj_hs03
+    400304: wl_qt_qyj_lz01
+    400306: wl_qt_qyj_lz02
+    400308: wl_qt_qyj_qg
+    400310: wl_qt_qyj_qz
+    400312: wl_qt_qyj_th009
+    400314: wl_qt_qyj_th010
+    400316: wl_qt_qyj_th011
+    400318: wl_qt_qyj_th013
+    400320: wl_qt_qyj_th014
+    400322: wl_qt_qyj_th015
+    400324: wl_qt_qyj_th016
+    400326: wl_qt_qyj_th04
+    400328: wl_qt_qyj_z005
+    400330: wl_qt_qyj_z008
+    400332: wl_qt_qyj_z009
+    400334: wl_qt_qyj_z03
+    400336: "\u56FE\u5F62007"
+    400338: "\u56FE\u5F62008"
+    400340: "\u56FE\u5F62009"
+    400342: "\u56FE\u5F62010"
+    400344: "\u56FE\u5F62011"
+    400346: "\u56FE\u5F62012"
+    400348: "\u56FE\u5F62013"
+    400350: "\u56FE\u5F62014"
+    400352: "\u5BF9\u8C61007"
+    2300000: wl_qt_qyj01
+    2300002: wl_qt_qyj02
+    2300004: wl_qt_qyj_fm009
+    2300006: wl_qt_qyj_fm010
+    2300008: wl_qt_qyj_fm013
+    2300010: wl_qt_qyj_fm014
+    2300012: wl_qt_qyj_fm015
+    2300014: wl_qt_qyj_fm016
+    2300016: wl_qt_qyj_fm017
+    2300018: wl_qt_qyj_fm018
+    2300020: wl_qt_qyj_fy009
+    2300022: wl_qt_qyj_fy01
+    2300024: wl_qt_qyj_fy010
+    2300026: wl_qt_qyj_fy011
+    2300028: wl_qt_qyj_fy012
+    2300030: wl_qt_qyj_fy013
+    2300032: wl_qt_qyj_fy02
+    2300034: wl_qt_qyj_fy05
+    2300036: wl_qt_qyj_hs005
+    2300038: wl_qt_qyj_hs008
+    2300040: wl_qt_qyj_hs009
+    2300042: wl_qt_qyj_hs03
+    2300044: wl_qt_qyj_lz01
+    2300046: wl_qt_qyj_lz02
+    2300048: wl_qt_qyj_qg
+    2300050: wl_qt_qyj_qz
+    2300052: wl_qt_qyj_th009
+    2300054: wl_qt_qyj_th010
+    2300056: wl_qt_qyj_th011
+    2300058: wl_qt_qyj_th013
+    2300060: wl_qt_qyj_th014
+    2300062: wl_qt_qyj_th015
+    2300064: wl_qt_qyj_th016
+    2300066: wl_qt_qyj_th04
+    2300068: wl_qt_qyj_z005
+    2300070: wl_qt_qyj_z008
+    2300072: wl_qt_qyj_z009
+    2300074: wl_qt_qyj_z03
+    3300000: wl_qt_qyj01
+    3300002: wl_qt_qyj02
+    3300004: wl_qt_qyj_fm009
+    3300006: wl_qt_qyj_fm010
+    3300008: wl_qt_qyj_fm013
+    3300010: wl_qt_qyj_fm014
+    3300012: wl_qt_qyj_fm015
+    3300014: wl_qt_qyj_fm016
+    3300016: wl_qt_qyj_fm017
+    3300018: wl_qt_qyj_fm018
+    3300020: wl_qt_qyj_fy009
+    3300022: wl_qt_qyj_fy01
+    3300024: wl_qt_qyj_fy010
+    3300026: wl_qt_qyj_fy011
+    3300028: wl_qt_qyj_fy012
+    3300030: wl_qt_qyj_fy013
+    3300032: wl_qt_qyj_fy02
+    3300034: wl_qt_qyj_fy05
+    3300036: wl_qt_qyj_hs005
+    3300038: wl_qt_qyj_hs008
+    3300040: wl_qt_qyj_hs009
+    3300042: wl_qt_qyj_hs03
+    3300044: wl_qt_qyj_lz01
+    3300046: wl_qt_qyj_lz02
+    3300048: wl_qt_qyj_qg
+    3300050: wl_qt_qyj_qz
+    3300052: wl_qt_qyj_th009
+    3300054: wl_qt_qyj_th010
+    3300056: wl_qt_qyj_th011
+    3300058: wl_qt_qyj_th013
+    3300060: wl_qt_qyj_th014
+    3300062: wl_qt_qyj_th015
+    3300064: wl_qt_qyj_th016
+    3300066: wl_qt_qyj_th04
+    3300068: wl_qt_qyj_z005
+    3300070: wl_qt_qyj_z008
+    3300072: wl_qt_qyj_z009
+    3300074: wl_qt_qyj_z03
+    4300000: wl_qt_qyj_qz
+    4300002: wl_qt_qyj_qg
+    4300004: wl_qt_qyj_fy01
+    4300006: wl_qt_qyj_fy02
+    4300008: wl_qt_qyj_fy05
+    4300010: wl_qt_qyj02
+    4300012: wl_qt_qyj01
+    4300014: wl_qt_qyj_fy009
+    4300016: wl_qt_qyj_fm010
+    4300018: wl_qt_qyj_fm014
+    4300020: wl_qt_qyj_fm015
+    4300022: wl_qt_qyj_fm013
+    4300024: wl_qt_qyj_fy010
+    4300026: wl_qt_qyj_fm009
+    4300028: wl_qt_qyj_fm016
+    4300030: wl_qt_qyj_fm017
+    4300032: wl_qt_qyj_fm018
+    4300034: wl_qt_qyj_fy011
+    4300036: wl_qt_qyj_th04
+    4300038: wl_qt_qyj_th009
+    4300040: wl_qt_qyj_th010
+    4300042: wl_qt_qyj_th011
+    4300044: wl_qt_qyj_th013
+    4300046: wl_qt_qyj_th014
+    4300048: wl_qt_qyj_th015
+    4300050: wl_qt_qyj_th016
+    4300052: wl_qt_qyj_fy012
+    4300054: wl_qt_qyj_fy013
+    4300056: "\u5BF9\u8C61007"
+    4300058: wl_qt_qyj_hs03
+    4300060: wl_qt_qyj_z03
+    4300062: wl_qt_qyj_hs005
+    4300064: wl_qt_qyj_z005
+    4300066: wl_qt_qyj_hs008
+    4300068: wl_qt_qyj_z008
+    4300070: wl_qt_qyj_hs009
+    4300072: wl_qt_qyj_z009
+    4300074: wl_qt_qyj_lz01
+    4300076: wl_qt_qyj_lz02
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: "\u5BF9\u8C61007"
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wl_qt_qyj_01
+    second: {fileID: 2100000, guid: 930010f27cca90c49b3cd6b0f863c6f4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wl_qt_qyj_03
+    second: {fileID: 2100000, guid: b747a4f161223a549ba5634800fe1db9, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0
+    animationPositionError: 0
+    animationScaleError: 0
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.30396476
+        functionName: OneFire
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.20851688
+        functionName: TwoFire
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.41556534
+        functionName: ThreeFire
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.51688695
+        functionName: FourFire
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0
+        functionName: ThreeFire
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.11306902
+        functionName: FourFire
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.6064611
+        functionName: TwoFire
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.71659327
+        functionName: OneFire
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.80469894
+        functionName: ThreeFire
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.9162995
+        functionName: FourFire
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

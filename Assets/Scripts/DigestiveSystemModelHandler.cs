@@ -46,7 +46,8 @@ public class DigestiveSystemModelHandler : ModelHandler
     {
         DigestiveSystem,
         OralCavity,
-        Oesophagus,        Stomach,
+        Oesophagus,
+        Stomach,
         Small_intestine,
         Large_intestine,
         Short_animation
@@ -61,12 +62,6 @@ public class DigestiveSystemModelHandler : ModelHandler
             modelInfo[i].SaveDefaultValues();
 
         ButtonOnePressed(FirstButtonToSelect);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     /// <summary>

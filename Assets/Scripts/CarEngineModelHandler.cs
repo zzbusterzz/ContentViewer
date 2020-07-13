@@ -12,8 +12,14 @@ public class CarEngineModelHandler : ModelHandler
     public GameObject engineMain;
     public GameObject engineStroke;
 
+    public ButtonControlPlayVideo animationPlayinstance;
+
+   // private Animator engineMain_Anim;
+    private Animator engineStroke_Anim;
+
     void Start()
     {
+        engineStroke_Anim = engineStroke.GetComponent<Animator>();
         ButtonOnePressed(FirstButtonToSelect);
     }
 
@@ -22,8 +28,7 @@ public class CarEngineModelHandler : ModelHandler
     /// </summary>
     public override void ButtonOnePressed(GameObject Button)
     {
-        SetActiveState(ActiveState.Model1, Button);
-        engineStroke.GetComponent<Animation>().Stop();
+        SetActiveState(ActiveState.Model1, Button);        
     }
 
     /// <summary>
@@ -32,7 +37,13 @@ public class CarEngineModelHandler : ModelHandler
     public override void ButtonTwoPressed(GameObject Button)
     {
         SetActiveState(ActiveState.Model2, Button);
-        engineStroke.GetComponent<Animation>().Play("Stroke1");
+        engineStroke_Anim.Play("Stroke1");
+        engineStroke_Anim.SetBool("All", false);
+        engineStroke_Anim.SetBool("One", true);
+        engineStroke_Anim.SetBool("Two", false);
+        engineStroke_Anim.SetBool("Three", false);
+        engineStroke_Anim.SetBool("Four", false);
+
     }
 
     /// <summary>
@@ -41,7 +52,12 @@ public class CarEngineModelHandler : ModelHandler
     public override void ButtonThreePressed(GameObject Button)
     {
         SetActiveState(ActiveState.Model2, Button);
-        engineStroke.GetComponent<Animation>().Play("Stroke2");
+        engineStroke_Anim.Play("Stroke2");
+        engineStroke_Anim.SetBool("All", false);
+        engineStroke_Anim.SetBool("One", false);
+        engineStroke_Anim.SetBool("Two", true);
+        engineStroke_Anim.SetBool("Three", false);
+        engineStroke_Anim.SetBool("Four", false);
     }
 
     /// <summary>
@@ -50,7 +66,12 @@ public class CarEngineModelHandler : ModelHandler
     public override void ButtonFourPressed(GameObject Button)
     {
         SetActiveState(ActiveState.Model2, Button);
-        engineStroke.GetComponent<Animation>().Play("Stroke3");
+        engineStroke_Anim.Play("Stroke3");
+        engineStroke_Anim.SetBool("All", false);
+        engineStroke_Anim.SetBool("One", false);
+        engineStroke_Anim.SetBool("Two", false);
+        engineStroke_Anim.SetBool("Three", true);
+        engineStroke_Anim.SetBool("Four", false);
     }
 
     /// <summary>
@@ -59,7 +80,12 @@ public class CarEngineModelHandler : ModelHandler
     public override void ButtonFivePressed(GameObject Button)
     {
         SetActiveState(ActiveState.Model2, Button);
-        engineStroke.GetComponent<Animation>().Play("Stroke4");
+        engineStroke_Anim.Play("Stroke4");
+        engineStroke_Anim.SetBool("All", false);
+        engineStroke_Anim.SetBool("One", false);
+        engineStroke_Anim.SetBool("Two", false);
+        engineStroke_Anim.SetBool("Three", false);
+        engineStroke_Anim.SetBool("Four", true);
     }
 
     /// <summary>
@@ -68,9 +94,13 @@ public class CarEngineModelHandler : ModelHandler
     public override void ButtonSixPressed(GameObject Button)
     {
         SetActiveState(ActiveState.Both, Button);
-        engineStroke.GetComponent<Animation>().Play("qiyouji_all");
+        engineStroke_Anim.Play("StrokeEngine_All");
+        engineStroke_Anim.SetBool("All", true);
+        engineStroke_Anim.SetBool("One", false);
+        engineStroke_Anim.SetBool("Two", false);
+        engineStroke_Anim.SetBool("Three", false);
+        engineStroke_Anim.SetBool("Four", false);
     }
-
 
     void SetActiveState(ActiveState activeState, GameObject currentPressedButton)
     {
@@ -102,6 +132,8 @@ public class CarEngineModelHandler : ModelHandler
                 engineStroke.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
                 break;
         }
+
+        animationPlayinstance.animator = activeModel.GetComponent<Animator>();
     }
 }
 
