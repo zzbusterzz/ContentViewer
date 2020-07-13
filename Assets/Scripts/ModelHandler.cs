@@ -5,6 +5,8 @@ public class ModelHandler : MonoBehaviour {
     [HideInInspector]
     public GameObject activeModel = null;
 
+    public GameObject B1Focus, B2Focus, B3Focus, B4Focus, B5Focus, B6Focus, B7Focus;
+
     public GameObject AnimationClipPlayer;
 
     public float rotateMultiplier = 5.0f;
@@ -44,35 +46,49 @@ public class ModelHandler : MonoBehaviour {
     public virtual void ButtonOnePressed(GameObject Button)
     {
         SelectButton(Button);
+
+        ZoomObject.instance.objectFocused = B1Focus;
     }
 
     public virtual void ButtonTwoPressed(GameObject Button)
     {
         SelectButton(Button);
+
+        ZoomObject.instance.objectFocused = B1Focus;
     }
 
     public virtual void ButtonThreePressed(GameObject Button)
     {
         SelectButton(Button);
+
+        ZoomObject.instance.objectFocused = B1Focus;
     }
 
     public virtual void ButtonFourPressed(GameObject Button)
     {
         SelectButton(Button);
+
+        ZoomObject.instance.objectFocused = B1Focus;
     }
 
     public virtual void ButtonFivePressed(GameObject Button)
     {
         SelectButton(Button);
+
+        ZoomObject.instance.objectFocused = B1Focus;
     }
 
     public virtual void ButtonSixPressed(GameObject Button)
     {
         SelectButton(Button);
+
+        ZoomObject.instance.objectFocused = B1Focus;
     }
 
     public virtual void ButtonSevenPressed(GameObject Button)
     {
         SelectButton(Button);
+
+        ZoomObject.instance.objectFocused = B1Focus;
     }
 }
