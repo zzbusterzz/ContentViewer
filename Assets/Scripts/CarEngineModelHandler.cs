@@ -117,7 +117,8 @@ public class CarEngineModelHandler : ModelHandler
 
     void SetActiveState(ActiveState activeState, GameObject currentPressedButton)
     {
-        engineMain.transform.rotation = Quaternion.Euler(new Vector3(0, 90, 0));
+        //engineMain.transform.rotation = Quaternion.Euler(new Vector3(0, 90, 0));
+        engineMain.transform.parent.localRotation = Quaternion.identity;
 
         switch (activeState)
         {
@@ -125,7 +126,11 @@ public class CarEngineModelHandler : ModelHandler
                 engineMain.SetActive(true);
                 engineStroke.SetActive(true);
                 activeModel = transform.gameObject;
-                Vector3 pos = engineStroke.transform.localPosition;
+                
+                Vector3 pos = engineMain.transform.parent.localPosition;
+                engineMain.transform.parent.localPosition = new Vector3(-0.02500007f, pos.y, pos.z);
+
+                pos = engineStroke.transform.localPosition;
                 engineStroke.transform.localPosition = new Vector3(0.35f, pos.y, pos.z);
                 engineStroke.transform.rotation = Quaternion.Euler(new Vector3(0, 90, 0));
                 break;
@@ -134,6 +139,10 @@ public class CarEngineModelHandler : ModelHandler
                 engineMain.SetActive(true);
                 engineStroke.SetActive(false);
                 activeModel = engineMain;
+
+                pos = engineMain.transform.parent.localPosition;
+                engineMain.transform.parent.localPosition = new Vector3(-0.02500007f, pos.y, pos.z);
+
                 pos = engineStroke.transform.localPosition;
                 engineStroke.transform.localPosition = new Vector3(0.35f, pos.y, pos.z);
                 engineStroke.transform.rotation = Quaternion.Euler(new Vector3(0, 90, 0));
@@ -143,6 +152,10 @@ public class CarEngineModelHandler : ModelHandler
                 engineMain.SetActive(false);
                 engineStroke.SetActive(true);
                 activeModel = engineStroke;
+                
+                pos = engineMain.transform.parent.localPosition;
+                engineMain.transform.parent.localPosition = new Vector3(0, pos.y, pos.z);
+
                 pos = engineStroke.transform.localPosition;
                 engineStroke.transform.localPosition = new Vector3(0, pos.y, pos.z);
                 engineStroke.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
@@ -150,6 +163,17 @@ public class CarEngineModelHandler : ModelHandler
         }
 
         animationPlayinstance.animator = activeModel.GetComponent<Animator>();
+    }
+
+    public override void RotateModel()
+    {
+        if (!activeModel) return;
+
+        if(activeModel == engineMain)
+            activeModel.transform.parent.Rotate(Vector3.up, -rotateMultiplier);
+        else
+            activeModel.transform.Rotate(Vector3.up, -rotateMultiplier);
+
     }
 }
 

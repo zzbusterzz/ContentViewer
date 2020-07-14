@@ -9,18 +9,26 @@ public class ModelInfo
     public Vector3 rotation;
     public Vector3 scale = Vector3.one;
 
+    public GameObject cameraEnd;
+
     private Vector3 localPosition;
     private Quaternion localRotation;
     private Vector3 localscale;
 
     private Transform parentModel;
-    
+
+    private Vector3 localCamPosition;
+    private Quaternion localCamRotation;
+
     public void SaveDefaultValues()
     {
         parentModel = model.transform.parent;
         localPosition = model.transform.localPosition;
         localRotation = model.transform.localRotation;
         localscale = model.transform.localScale;
+
+        localCamPosition = cameraEnd.transform.localPosition;
+        localCamRotation = cameraEnd.transform.localRotation;
     }
 
     public void PushModelFront()
@@ -29,6 +37,8 @@ public class ModelInfo
         model.transform.position = position;
         model.transform.rotation = Quaternion.Euler(rotation);
         model.transform.localScale = scale;
+
+        cameraEnd.transform.parent = null;
     }
 
     public void ResetModel()
@@ -37,6 +47,11 @@ public class ModelInfo
         model.transform.localPosition = localPosition;
         model.transform.localRotation = localRotation;
         model.transform.localScale = localscale;
+
+        cameraEnd.transform.parent = model.transform;
+        cameraEnd.transform.localPosition = localCamPosition;
+        cameraEnd.transform.localRotation = localCamRotation;
+
     }
 }
 

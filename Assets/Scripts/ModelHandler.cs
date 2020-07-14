@@ -26,7 +26,7 @@ public class ModelHandler : MonoBehaviour {
             ZoomObject.instance.objectFocused = B1Focus;
     }
 
-    public void RotateModel()
+    public virtual void RotateModel()
     {
         if (!activeModel) return;
 

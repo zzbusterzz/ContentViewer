@@ -22,6 +22,11 @@ public class ButtonControlPlayVideo : MonoBehaviour
     void Start()
     {
         InitialiseButtonState();
+
+        if(animator == null)
+        {
+            gameObject.SetActive(false);
+        }
     }
         
     void InitialiseButtonState()
