@@ -56,8 +56,10 @@ public class DigestiveSystemModelHandler : ModelHandler
     public List<ModelInfo> modelInfo;
 
     // Use this for initialization
-    void Start()
+    public override void Start()
     {
+        base.Start();
+
         for(int i = 0; i < modelInfo.Count; i++)
             modelInfo[i].SaveDefaultValues();
 
@@ -69,6 +71,8 @@ public class DigestiveSystemModelHandler : ModelHandler
     /// </summary>
     public override void ButtonOnePressed(GameObject Button)
     {
+        base.ButtonOnePressed(Button);
+
         SetActiveState(ActiveState.DigestiveSystem, Button);
     }
 
@@ -77,6 +81,8 @@ public class DigestiveSystemModelHandler : ModelHandler
     /// </summary>
     public override void ButtonTwoPressed(GameObject Button)
     {
+        base.ButtonTwoPressed(Button);
+
         SetActiveState(ActiveState.OralCavity, Button);
     }
 
@@ -85,6 +91,8 @@ public class DigestiveSystemModelHandler : ModelHandler
     /// </summary>
     public override void ButtonThreePressed(GameObject Button)
     {
+        base.ButtonThreePressed(Button);
+
         SetActiveState(ActiveState.Oesophagus, Button);
     }
 
@@ -93,6 +101,8 @@ public class DigestiveSystemModelHandler : ModelHandler
     /// </summary>
     public override void ButtonFourPressed(GameObject Button)
     {
+        base.ButtonFourPressed(Button);
+
         SetActiveState(ActiveState.Stomach, Button);
     }
 
@@ -101,6 +111,8 @@ public class DigestiveSystemModelHandler : ModelHandler
     /// </summary>
     public override void ButtonFivePressed(GameObject Button)
     {
+        base.ButtonFivePressed(Button);
+
         SetActiveState(ActiveState.Small_intestine, Button);
     }
 
@@ -109,6 +121,8 @@ public class DigestiveSystemModelHandler : ModelHandler
     /// </summary>
     public override void ButtonSixPressed(GameObject Button)
     {
+        base.ButtonSixPressed(Button);
+
         SetActiveState(ActiveState.Large_intestine, Button);
     }
 
@@ -117,6 +131,8 @@ public class DigestiveSystemModelHandler : ModelHandler
     /// </summary>
     public override void ButtonSevenPressed(GameObject Button)
     {
+        base.ButtonSevenPressed(Button);
+
         SetActiveState(ActiveState.Short_animation, Button);
     }
 
@@ -125,8 +141,6 @@ public class DigestiveSystemModelHandler : ModelHandler
     /// </summary>
     void SetActiveState(ActiveState activeState, GameObject currentPressedButton)
     {
-        SelectButton(currentPressedButton);
-
         for (int i = 0; i < modelInfo.Count; i++)
         {
             if (modelInfo[i].model == activeModel)

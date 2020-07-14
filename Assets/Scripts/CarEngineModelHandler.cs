@@ -17,8 +17,9 @@ public class CarEngineModelHandler : ModelHandler
    // private Animator engineMain_Anim;
     private Animator engineStroke_Anim;
 
-    void Start()
+    public override void Start()
     {
+        base.Start();
         engineStroke_Anim = engineStroke.GetComponent<Animator>();
         ButtonOnePressed(FirstButtonToSelect);
     }
@@ -28,6 +29,8 @@ public class CarEngineModelHandler : ModelHandler
     /// </summary>
     public override void ButtonOnePressed(GameObject Button)
     {
+        base.ButtonOnePressed(Button);
+
         SetActiveState(ActiveState.Model1, Button);        
     }
 
@@ -36,6 +39,8 @@ public class CarEngineModelHandler : ModelHandler
     /// </summary>
     public override void ButtonTwoPressed(GameObject Button)
     {
+        base.ButtonOnePressed(Button);
+
         SetActiveState(ActiveState.Model2, Button);
         engineStroke_Anim.Play("Stroke1");
         engineStroke_Anim.SetBool("All", false);
@@ -51,6 +56,8 @@ public class CarEngineModelHandler : ModelHandler
     /// </summary>
     public override void ButtonThreePressed(GameObject Button)
     {
+        base.ButtonOnePressed(Button);
+
         SetActiveState(ActiveState.Model2, Button);
         engineStroke_Anim.Play("Stroke2");
         engineStroke_Anim.SetBool("All", false);
@@ -65,6 +72,8 @@ public class CarEngineModelHandler : ModelHandler
     /// </summary>
     public override void ButtonFourPressed(GameObject Button)
     {
+        base.ButtonOnePressed(Button);
+
         SetActiveState(ActiveState.Model2, Button);
         engineStroke_Anim.Play("Stroke3");
         engineStroke_Anim.SetBool("All", false);
@@ -79,6 +88,8 @@ public class CarEngineModelHandler : ModelHandler
     /// </summary>
     public override void ButtonFivePressed(GameObject Button)
     {
+        base.ButtonOnePressed(Button);
+
         SetActiveState(ActiveState.Model2, Button);
         engineStroke_Anim.Play("Stroke4");
         engineStroke_Anim.SetBool("All", false);
@@ -93,6 +104,8 @@ public class CarEngineModelHandler : ModelHandler
     /// </summary>
     public override void ButtonSixPressed(GameObject Button)
     {
+        base.ButtonOnePressed(Button);
+
         SetActiveState(ActiveState.Both, Button);
         engineStroke_Anim.Play("StrokeEngine_All");
         engineStroke_Anim.SetBool("All", true);
@@ -104,8 +117,6 @@ public class CarEngineModelHandler : ModelHandler
 
     void SetActiveState(ActiveState activeState, GameObject currentPressedButton)
     {
-        SelectButton(currentPressedButton);
-
         engineMain.transform.rotation = Quaternion.Euler(new Vector3(0, 90, 0));
 
         switch (activeState)
@@ -114,6 +125,8 @@ public class CarEngineModelHandler : ModelHandler
                 engineMain.SetActive(true);
                 engineStroke.SetActive(true);
                 activeModel = transform.gameObject;
+                Vector3 pos = engineStroke.transform.localPosition;
+                engineStroke.transform.localPosition = new Vector3(0.35f, pos.y, pos.z);
                 engineStroke.transform.rotation = Quaternion.Euler(new Vector3(0, 90, 0));
                 break;
 
@@ -121,6 +134,8 @@ public class CarEngineModelHandler : ModelHandler
                 engineMain.SetActive(true);
                 engineStroke.SetActive(false);
                 activeModel = engineMain;
+                pos = engineStroke.transform.localPosition;
+                engineStroke.transform.localPosition = new Vector3(0.35f, pos.y, pos.z);
                 engineStroke.transform.rotation = Quaternion.Euler(new Vector3(0, 90, 0));
                 break;
 
@@ -128,7 +143,8 @@ public class CarEngineModelHandler : ModelHandler
                 engineMain.SetActive(false);
                 engineStroke.SetActive(true);
                 activeModel = engineStroke;
-
+                pos = engineStroke.transform.localPosition;
+                engineStroke.transform.localPosition = new Vector3(0, pos.y, pos.z);
                 engineStroke.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
                 break;
         }

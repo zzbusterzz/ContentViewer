@@ -7,6 +7,8 @@ public class ModelHandler : MonoBehaviour {
 
     public GameObject B1Focus, B2Focus, B3Focus, B4Focus, B5Focus, B6Focus, B7Focus;
 
+    public Transform CameraPos1, CameraPos2, CameraPos3, CameraPos4, CameraPos5, CameraPos6, CameraPos7;
+
     public GameObject AnimationClipPlayer;
 
     public float rotateMultiplier = 5.0f;
@@ -19,15 +21,17 @@ public class ModelHandler : MonoBehaviour {
     private GameObject PreviousButton;
 
     // Use this for initialization
-    void Start () {
-		
-	}
+    public virtual void Start () {
+        if(B1Focus != null)
+            ZoomObject.instance.objectFocused = B1Focus;
+    }
 
     public void RotateModel()
     {
         if (!activeModel) return;
 
         activeModel.transform.Rotate    (Vector3.up, -rotateMultiplier);
+        
     }
 
 
@@ -48,47 +52,75 @@ public class ModelHandler : MonoBehaviour {
         SelectButton(Button);
 
         ZoomObject.instance.objectFocused = B1Focus;
+
+        Camera.main.transform.position = CameraPos1.position;
+
+        ZoomObject.instance.ResetPosition();
     }
 
     public virtual void ButtonTwoPressed(GameObject Button)
     {
         SelectButton(Button);
 
-        ZoomObject.instance.objectFocused = B1Focus;
+        ZoomObject.instance.objectFocused = B2Focus;
+
+        Camera.main.transform.position = CameraPos2.position;
+
+        ZoomObject.instance.ResetPosition();
     }
 
     public virtual void ButtonThreePressed(GameObject Button)
     {
         SelectButton(Button);
 
-        ZoomObject.instance.objectFocused = B1Focus;
+        ZoomObject.instance.objectFocused = B3Focus;
+
+        Camera.main.transform.position = CameraPos3.position;
+
+        ZoomObject.instance.ResetPosition();
     }
 
     public virtual void ButtonFourPressed(GameObject Button)
     {
         SelectButton(Button);
 
-        ZoomObject.instance.objectFocused = B1Focus;
+        ZoomObject.instance.objectFocused = B4Focus;
+
+        Camera.main.transform.position = CameraPos4.position;
+
+        ZoomObject.instance.ResetPosition();
     }
 
     public virtual void ButtonFivePressed(GameObject Button)
     {
         SelectButton(Button);
 
-        ZoomObject.instance.objectFocused = B1Focus;
+        ZoomObject.instance.objectFocused = B5Focus;
+
+        Camera.main.transform.position = CameraPos5.position;
+
+        ZoomObject.instance.ResetPosition();
     }
 
     public virtual void ButtonSixPressed(GameObject Button)
     {
         SelectButton(Button);
 
-        ZoomObject.instance.objectFocused = B1Focus;
+        ZoomObject.instance.objectFocused = B6Focus;
+
+        Camera.main.transform.position = CameraPos6.position;
+
+        ZoomObject.instance.ResetPosition();
     }
 
     public virtual void ButtonSevenPressed(GameObject Button)
     {
         SelectButton(Button);
 
-        ZoomObject.instance.objectFocused = B1Focus;
+        ZoomObject.instance.objectFocused = B7Focus;
+
+        Camera.main.transform.position = CameraPos7.position;
+
+        ZoomObject.instance.ResetPosition();
     }
 }

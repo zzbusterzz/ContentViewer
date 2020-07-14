@@ -10,6 +10,8 @@ public class ZoomObject : MonoBehaviour
     [HideInInspector]
     public GameObject objectFocused;
 
+    private Vector3 positonCamera;
+
     public void Start()
     {
         instance = this;
@@ -31,9 +33,16 @@ public class ZoomObject : MonoBehaviour
 
     public void zoomInScene(float value)
     {
-       // Debug.Log("Zoomed " + value);
-        //Add zoom code
+        Camera.main.transform.position = Vector3.Lerp(positonCamera, objectFocused.transform.position, value);
+    }
 
-     //   Camera.main.transform.position = 
+    public void storeCameraPosition()
+    {
+        positonCamera = Camera.main.transform.position;
+    }
+
+    public void ResetPosition()
+    {
+        s1.value = s2.value = 0;
     }
 }
