@@ -99,9 +99,14 @@ public class ButtonControlTop : MonoBehaviour {
         //DO nothing
     }
 
-    public void OnToggleInstructions()
+    public void OnToggleLevel()
     {
-        if(status == 0 || status == 2)
+        RectTransform RT = InstructionPanel.GetComponent<RectTransform>();
+
+        RectTransformExtensions.SetLeft(RT, 0);
+        RectTransformExtensions.SetRight(RT, 1700);
+
+        if (status == 0 || status == 2)
             InstructionPanel.gameObject.SetActive(!InstructionPanel.gameObject.activeInHierarchy);
         if (InstructionPanel.gameObject.activeInHierarchy)
         {
@@ -118,8 +123,18 @@ public class ButtonControlTop : MonoBehaviour {
         }
     }
 
+    public void OnToggleInstructions()
+    {
+      
+    }
+
     public void OnToggleSettingsWindow()
     {
+        RectTransform RT = InstructionPanel.GetComponent<RectTransform>();
+
+        RectTransformExtensions.SetLeft(RT, 1700);
+        RectTransformExtensions.SetRight(RT, 0);
+
         if (status == 0 || status == 1)
             InstructionPanel.gameObject.SetActive(!InstructionPanel.gameObject.activeInHierarchy);
         if (InstructionPanel.gameObject.activeInHierarchy)
