@@ -1,16 +1,8 @@
-﻿using Assets.SimpleLocalization;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-public enum SupportedLanguges
-{
-    English,
-    Chinese
-}
 
 public class ButtonControlTop : MonoBehaviour {
-
-    public SupportedLanguges currentLanguage = SupportedLanguges.Chinese;
 
     public Image backgroundBG;
 
@@ -34,21 +26,7 @@ public class ButtonControlTop : MonoBehaviour {
 
     private bool autoRotate = true;
 
-    void Awake()
-    {
-        
-
-        switch (currentLanguage)
-        {
-            case SupportedLanguges.English:
-                SetLocalization("English");
-                break;
-
-            case SupportedLanguges.Chinese:
-                SetLocalization("Chinese");
-                break;
-        }
-    }
+    private int status = 0;//1 - On Settings, 2 - Levels
 
     private void Start()
     {
@@ -59,18 +37,9 @@ public class ButtonControlTop : MonoBehaviour {
         InititaliseUI();    
     }
 
-    /// <summary>
-    /// Change localization at runtime
-    /// </summary>
-    public void SetLocalization(string localization)
-    {
-        LocalizationManager.Language = localization;
-    }
-
-
     void InititaliseUI()
     {
-        OnToggleAutoRotate();//Disables autorotate initially
+      //  OnToggleAutoRotate();//Disables autorotate initially
     }
 
     public void OnVolumeChange(float value)
@@ -132,16 +101,39 @@ public class ButtonControlTop : MonoBehaviour {
 
     public void OnToggleInstructions()
     {
-        InstructionPanel.gameObject.SetActive(!InstructionPanel.gameObject.activeInHierarchy);
+        if(status == 0 || status == 2)
+            InstructionPanel.gameObject.SetActive(!InstructionPanel.gameObject.activeInHierarchy);
         if (InstructionPanel.gameObject.activeInHierarchy)
         {
-            InstructionPanel.DisplayInstructionsOnPanel();
+            status = 2;
+            InstructionPanel.ShowLevels();
+        }
+        else
+        {
+            if (status == 2)
+            {
+                InstructionPanel.HideLevels();
+                status = 0;
+            }
         }
     }
 
     public void OnToggleSettingsWindow()
     {
-       
+        if (status == 0 || status == 1)
+            InstructionPanel.gameObject.SetActive(!InstructionPanel.gameObject.activeInHierarchy);
+        if (InstructionPanel.gameObject.activeInHierarchy)
+        {
+            status = 1;
+            InstructionPanel.ShowSettings();
+        }
+        else
+        {
+            if (status == 1) {
+                InstructionPanel.HideSettings();
+                status = 0;
+            }
+        } 
     }
 
     private void Update()

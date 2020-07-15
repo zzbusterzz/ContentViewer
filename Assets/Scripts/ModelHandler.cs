@@ -11,7 +11,7 @@ public class ModelHandler : MonoBehaviour {
 
     public GameObject AnimationClipPlayer;
 
-    public float rotateMultiplier = 5.0f;
+   // public float rotateMultiplier = 5.0f;
 
     public GameObject FirstButtonToSelect;
 
@@ -30,7 +30,7 @@ public class ModelHandler : MonoBehaviour {
     {
         if (!activeModel) return;
 
-        activeModel.transform.Rotate    (Vector3.up, -rotateMultiplier);
+        activeModel.transform.Rotate    (Vector3.up, -Settings.instance.getRotation());
         
     }
 

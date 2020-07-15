@@ -169,10 +169,10 @@ public class CarEngineModelHandler : ModelHandler
     {
         if (!activeModel) return;
 
-        if(activeModel == engineMain)
-            activeModel.transform.parent.Rotate(Vector3.up, -rotateMultiplier);
+        if (activeModel == engineMain)
+            activeModel.transform.parent.Rotate(Vector3.up, Settings.instance.getRotation());
         else
-            activeModel.transform.Rotate(Vector3.up, -rotateMultiplier);
+            activeModel.transform.Rotate(Vector3.up, Settings.instance.getRotation());
 
     }
 }

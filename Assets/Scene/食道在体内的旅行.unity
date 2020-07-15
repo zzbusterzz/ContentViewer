@@ -544,7 +544,6 @@ MonoBehaviour:
   CameraPos6: {fileID: 0}
   CameraPos7: {fileID: 0}
   AnimationClipPlayer: {fileID: 0}
-  rotateMultiplier: 0.75
   FirstButtonToSelect: {fileID: 1243278517}
   NormalTransition:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
@@ -1284,7 +1283,7 @@ PrefabInstance:
     - target: {fileID: 1585148132936481456, guid: 6aaf39639a929dd46978df5244ebbb7c,
         type: 3}
       propertyPath: LocalizationKey
-      value: SceneAnatomy.1
+      value: "\u98DF\u9053\u5728\u4F53\u5185\u7684\u65C5\u884C"
       objectReference: {fileID: 0}
     - target: {fileID: 1637233076287291541, guid: 6aaf39639a929dd46978df5244ebbb7c,
         type: 3}
@@ -1420,7 +1419,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
