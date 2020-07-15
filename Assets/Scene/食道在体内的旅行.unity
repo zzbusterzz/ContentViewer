@@ -850,6 +850,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1138788710}
+    - target: {fileID: 223123044484784482, guid: 6aaf39639a929dd46978df5244ebbb7c,
+        type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 224060612870739770, guid: 6aaf39639a929dd46978df5244ebbb7c,
         type: 3}
       propertyPath: m_AnchorMax.y

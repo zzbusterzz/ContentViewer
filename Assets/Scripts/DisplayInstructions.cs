@@ -1,6 +1,5 @@
 ﻿using Assets.SimpleLocalization;
-using Boo.Lang;
-using System.Xml.Serialization;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 

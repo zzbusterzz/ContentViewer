@@ -9,9 +9,9 @@ EditorBuildSettings:
     path: "Assets/Scene/\u5185\u71C3\u673A\u7684\u5DE5\u4F5C\u539F\u7406.unity"
     guid: c17f9428b977a06429edabfa7825ec35
   - enabled: 1
-    path: "Assets/Scene/\u98DF\u9053\u5728\u4F53\u5185\u7684\u65C5\u884C.unity"
-    guid: 36bded30e7c08864ab5e910c9dbabed0
-  - enabled: 1
     path: "Assets/Scene/\u6708\u76F8.unity"
     guid: f2381505d659ad449bc6bbb4fdccdd39
+  - enabled: 1
+    path: "Assets/Scene/\u98DF\u9053\u5728\u4F53\u5185\u7684\u65C5\u884C.unity"
+    guid: 36bded30e7c08864ab5e910c9dbabed0
   m_configObjects: {}
