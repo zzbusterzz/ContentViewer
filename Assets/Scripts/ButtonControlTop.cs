@@ -26,8 +26,6 @@ public class ButtonControlTop : MonoBehaviour {
 
     private bool autoRotate = true;
 
-    private int status = 0;//1 - On Settings, 2 - Levels
-
     private void Start()
     {
         VolumeSlider.onValueChanged.AddListener(OnVolumeChange);
@@ -91,7 +89,22 @@ public class ButtonControlTop : MonoBehaviour {
 
     public void OnToggleVR()
     {
+        RectTransform RT = InstructionPanel.GetComponent<RectTransform>();
 
+        RectTransformExtensions.SetLeft(RT, 1600);
+        RectTransformExtensions.SetRight(RT, 100);
+
+        if (InstructionPanel.gameObject.activeInHierarchy)
+        {
+            if (DisplayInstructions.instance.GetWindowStatus() == 3)
+                InstructionPanel.HideWindow();
+            else
+                InstructionPanel.ShowVROptions();
+        }
+        else
+        {
+            InstructionPanel.ShowVROptions();
+        }
     }
 
     public void OnToggleSubtitles()
@@ -106,20 +119,16 @@ public class ButtonControlTop : MonoBehaviour {
         RectTransformExtensions.SetLeft(RT, 0);
         RectTransformExtensions.SetRight(RT, 1700);
 
-        if (status == 0 || status == 2)
-            InstructionPanel.gameObject.SetActive(!InstructionPanel.gameObject.activeInHierarchy);
         if (InstructionPanel.gameObject.activeInHierarchy)
         {
-            status = 2;
-            InstructionPanel.ShowLevels();
+            if (DisplayInstructions.instance.GetWindowStatus() == 2)
+                InstructionPanel.HideWindow();
+            else
+                InstructionPanel.ShowLevels();
         }
         else
         {
-            if (status == 2)
-            {
-                InstructionPanel.HideLevels();
-                status = 0;
-            }
+            InstructionPanel.ShowLevels();
         }
     }
 
@@ -135,19 +144,16 @@ public class ButtonControlTop : MonoBehaviour {
         RectTransformExtensions.SetLeft(RT, 1700);
         RectTransformExtensions.SetRight(RT, 0);
 
-        if (status == 0 || status == 1)
-            InstructionPanel.gameObject.SetActive(!InstructionPanel.gameObject.activeInHierarchy);
         if (InstructionPanel.gameObject.activeInHierarchy)
         {
-            status = 1;
-            InstructionPanel.ShowSettings();
+            if (DisplayInstructions.instance.GetWindowStatus() == 1)
+                InstructionPanel.HideWindow();
+            else
+                InstructionPanel.ShowSettings();
         }
         else
         {
-            if (status == 1) {
-                InstructionPanel.HideSettings();
-                status = 0;
-            }
+            InstructionPanel.ShowSettings();
         } 
     }
 

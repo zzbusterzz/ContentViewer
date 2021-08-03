@@ -18,6 +18,12 @@ public class Settings : MonoBehaviour
 
     public Dropdown language;
 
+    public _3DMethod _3DMethod = _3DMethod.None;
+
+    public Toggle none;
+    public Toggle SBS;
+    public Toggle Anaglyph;
+
     private float rotationMultiplier = 0.1f;
 
     void Awake()
@@ -51,6 +57,11 @@ public class Settings : MonoBehaviour
     {
         language.onValueChanged.AddListener(OnDropDownChange);
         rotationSlider.onValueChanged.AddListener(OnValueChange);
+
+        none.onValueChanged.AddListener(OnToggleChange);
+        SBS.onValueChanged.AddListener(OnToggleChange);
+        Anaglyph.onValueChanged.AddListener(OnToggleChange);
+
     }
 
     /// <summary>
@@ -64,6 +75,25 @@ public class Settings : MonoBehaviour
     public void OnValueChange(float value)
     {
         rotationMultiplier = value;
+    }
+
+    public void OnToggleChange(bool toogleStatus)
+    {
+        if (toogleStatus)
+        {
+            if (none.isOn)
+                Stereo3D.instance.S3DEnabled = false;
+            else if (SBS.isOn)
+            {
+                Stereo3D.instance.S3DEnabled = true;
+                Stereo3D.instance.method = _3DMethod.SideBySide;
+            }                
+            else if (Anaglyph.isOn)
+            {
+                Stereo3D.instance.S3DEnabled = true;
+                Stereo3D.instance.method = _3DMethod.Anaglyph;
+            }
+        }
     }
 
     public float getRotation()

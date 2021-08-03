@@ -5,23 +5,64 @@ using UnityEngine.UI;
 
 public class DisplayInstructions : MonoBehaviour
 {
+    public static DisplayInstructions instance;
+
     public Transform attachToComponent;
     public GameObject prefab;
 
     private Transform buttonLevelHolder;
     private Transform buttonSettingsHolder;
+    private Transform buttonVRHolder;
 
     private int status = 0;//0 closed
 
     void Awake()
     {
+        instance = this;
+
         buttonLevelHolder = new GameObject().transform;
         buttonSettingsHolder = new GameObject().transform;
+        buttonVRHolder = new GameObject().transform;
 
         buttonLevelHolder.gameObject.SetActive(false);
         buttonSettingsHolder.gameObject.SetActive(false);
+        buttonVRHolder.gameObject.SetActive(false);
 
         status = 2;
+
+        HideWindow();       
+    }
+
+    public int GetWindowStatus()
+    {
+        return status;
+    }
+
+    public void HideWindow()
+    {
+        List<Transform> listofT = new List<Transform>();
+        foreach (Transform child in attachToComponent)
+        {
+            listofT.Add(child);
+        }
+
+        foreach (Transform child in listofT)
+        {
+            switch(child.tag)
+            {
+                case "Settings":
+                    child.SetParent(buttonSettingsHolder);
+                    break;
+                case "VRSettings":
+                    child.SetParent(buttonVRHolder);
+                    break;
+                case "Level":
+                    child.SetParent(buttonLevelHolder);
+                    break;
+            }
+        }
+        status = 0;
+        gameObject.SetActive(false);
     }
 
     public void DisplayInstructionsOnPanel()
@@ -29,11 +70,30 @@ public class DisplayInstructions : MonoBehaviour
         
     }
 
+    public void ShowVROptions()
+    {
+        CheckOpenWindow();
+
+        status = 3;
+
+        List<Transform> listofT = new List<Transform>();
+        foreach (Transform child in buttonVRHolder)
+        {
+            listofT.Add(child);
+        }
+
+        foreach (Transform child in listofT)
+        {
+            child.SetParent(attachToComponent);
+        }
+    }
+
+
     public void ShowSettings()
     {
         CheckOpenWindow();
 
-        status = 2;
+        status = 1;
 
         List<Transform> listofT = new List<Transform>();
         foreach (Transform child in buttonSettingsHolder)
@@ -48,26 +108,13 @@ public class DisplayInstructions : MonoBehaviour
      
     }
 
-    public void HideSettings()
-    {
-        List<Transform> listofT = new List<Transform>();
-        foreach (Transform child in attachToComponent)
-        {
-            listofT.Add(child);
-        }
 
-        foreach (Transform child in listofT)
-        {
-            child.SetParent(buttonSettingsHolder);
-        }
-        status = 0;
-    }
 
     public void ShowLevels()
     {
         CheckOpenWindow();
 
-        status = 1;
+        status = 2;
 
         if (buttonLevelHolder.childCount == 0)
         {
@@ -77,6 +124,7 @@ public class DisplayInstructions : MonoBehaviour
             {
                 scenes[i] = System.IO.Path.GetFileNameWithoutExtension(UnityEngine.SceneManagement.SceneUtility.GetScenePathByBuildIndex(i));
                 Button sceneButtons = Instantiate<GameObject>(prefab, attachToComponent).GetComponent<Button>();
+                sceneButtons.tag = "Level";
                 sceneButtons.name = scenes[i];
                 sceneButtons.onClick.AddListener(() => CallbackLoad(sceneButtons));
                 LocalizedText text = sceneButtons.GetComponentInChildren<Text>().gameObject.AddComponent<LocalizedText>();
@@ -99,37 +147,13 @@ public class DisplayInstructions : MonoBehaviour
         }
     }
 
-    public void HideLevels()
-    {
-        List<Transform> listofT = new List<Transform>();
-        foreach (Transform child in attachToComponent)
-        {
-            listofT.Add(child);
-        }
-
-        foreach (Transform child in listofT)
-        {
-            child.SetParent(buttonLevelHolder);
-        }
-               
-        status = 0;
-    }
-
     void CheckOpenWindow()
     {
-        switch (status)
+        if(status > 0)
         {
-            case 1:
-                HideLevels();
-                break;
-
-            case 2:
-                HideSettings();
-                break;
-
-            default:
-                break;
+            HideWindow();
         }
+        gameObject.SetActive(true);
     }
 
     void CallbackLoad(Button button)
