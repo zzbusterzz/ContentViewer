@@ -12,7 +12,7 @@ public class Settings : MonoBehaviour
 {
     public static Settings instance;
 
-    public SupportedLanguges currentLanguage = SupportedLanguges.Chinese;
+    public SupportedLanguges currentLanguage = SupportedLanguges.English;
 
     public Slider rotationSlider;
 

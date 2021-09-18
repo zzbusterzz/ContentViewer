@@ -22,7 +22,6 @@ public class ModelHandler : MonoBehaviour {
 
     // Use this for initialization
     public virtual void Start () {
-        Debug.Log(ZoomObject.instance.name);
 
         if(B1Focus != null)
             ZoomObject.instance.objectFocused = B1Focus;

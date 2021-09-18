@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-
 public class ButtonControlTop : MonoBehaviour {
 
     public Image backgroundBG;
@@ -26,13 +25,28 @@ public class ButtonControlTop : MonoBehaviour {
 
     private bool autoRotate = true;
 
+    private LabelControl[] labelObjects;
+
     private void Start()
     {
         VolumeSlider.onValueChanged.AddListener(OnVolumeChange);
 
         VolumeSlider.value = PlayerPrefs.GetFloat("Volume", 1);
 
-        InititaliseUI();    
+        InititaliseUI();
+
+        GameObject[] lObj =  GameObject.FindGameObjectsWithTag("Label");
+
+        if(lObj != null && lObj.Length != 0)
+        {
+            labelObjects = new LabelControl[lObj.Length];
+
+            for(int i = 0; i < labelObjects.Length; i++)
+            {
+                labelObjects[i] = lObj[i].GetComponent<LabelControl>();
+            }
+        }
+        
     }
 
     void InititaliseUI()
@@ -84,7 +98,12 @@ public class ButtonControlTop : MonoBehaviour {
 
     public void OnToggleLabel()
     {
+        if (labelObjects == null || labelObjects.Length == 0) return;
 
+        for(int i = 0; i < labelObjects.Length; i++)
+        {
+            labelObjects[i].ToggleLabel();
+        }
     }
 
     public void OnToggleVR()
