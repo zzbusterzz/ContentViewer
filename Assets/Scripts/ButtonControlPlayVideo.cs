@@ -6,16 +6,16 @@ public class ButtonControlPlayVideo : MonoBehaviour
     public Animator animator;//Aassign controlllelr here which willl handle animation of the model
 
     public Image bgImage;
-    public Button PlayPauseButton;
-    public Button StopButton;
-    public Slider VideoSlider;
+    public Button playPauseButton;
+    public Button stopButton;
+    public Slider videoSlider;
 
     public bool isPlaying = true;
     private bool isDragging = false;
     
     void Awake()
     {
-        VideoSlider.onValueChanged.AddListener(OnVideoSlider);
+        videoSlider.onValueChanged.AddListener(OnVideoSlider);
     }
 
     // Use this for initialization
@@ -33,8 +33,8 @@ public class ButtonControlPlayVideo : MonoBehaviour
     {
         OnPlayPauseButton();//Disable animation
 
-        if (StopButton != null)
-            StopButton.image.sprite = CommonUIComponents.instance.uIAtlas.GetSprite("stop");
+        if (stopButton != null)
+            stopButton.image.sprite = CommonUIComponents.instance.uIAtlas.GetSprite("stop");
 
         if(bgImage != null)
             bgImage.sprite = CommonUIComponents.instance.uIAtlas.GetSprite("BG");
@@ -49,11 +49,11 @@ public class ButtonControlPlayVideo : MonoBehaviour
 
         if (isPlaying)
         {
-            PlayPauseButton.image.sprite = CommonUIComponents.instance.uIAtlas.GetSprite("pause");
+            playPauseButton.image.sprite = CommonUIComponents.instance.uIAtlas.GetSprite("pause");
         }
         else
         {
-            PlayPauseButton.image.sprite = CommonUIComponents.instance.uIAtlas.GetSprite("play");
+            playPauseButton.image.sprite = CommonUIComponents.instance.uIAtlas.GetSprite("play");
         }
 
         if (animator != null)
@@ -101,7 +101,7 @@ public class ButtonControlPlayVideo : MonoBehaviour
     {
         if (isPlaying & !isDragging && animator != null)
         {
-            VideoSlider.value = animator.GetCurrentAnimatorStateInfo(0).normalizedTime%1;
+            videoSlider.value = animator.GetCurrentAnimatorStateInfo(0).normalizedTime%1;
             //  Debug.Log("vallue : " + animator.GetCurrentAnimatorStateInfo(0).normalizedTime%1);
         }
     }

@@ -5,23 +5,23 @@ public class ButtonControlTop : MonoBehaviour {
 
     public Image backgroundBG;
 
-    public Slider VolumeSlider;
+    public Slider volumeSlider;
 
-    public Button Volume;
-    public Button RotateModel;
-    public Button ToggleLabel;
-    public Button ToggleVR;
-    public Button ToggleSubtitles;//Do nothing as of yet
-    public Button ToggleInstructions;//Do nothing as of yet
-    public Button ToggleSettingsWindow;
+    public Button volume;
+    public Button rotateModel;
+    public Button toggleLabel;
+    public Button toggleVR;
+    public Button toggleSubtitles;//Do nothing as of yet
+    public Button toggleInstructions;//Do nothing as of yet
+    public Button toggleSettingsWindow;
 
-    public VolumeControl VolumeControl;
-    public ModelHandler ModelHandler;
+    public VolumeControl volumeControl;
+    public ModelHandler modelHandler;
 
-    public Sprite VolumeButtonOn;
-    public Sprite VolumeButtonOff;
+    public Sprite volumeButtonOn;
+    public Sprite volumeButtonOff;
 
-    public DisplayInstructions InstructionPanel;
+    public DisplayInstructions instructionPanel;
 
     private bool autoRotate = true;
 
@@ -29,9 +29,9 @@ public class ButtonControlTop : MonoBehaviour {
 
     private void Start()
     {
-        VolumeSlider.onValueChanged.AddListener(OnVolumeChange);
+        volumeSlider.onValueChanged.AddListener(OnVolumeChange);
 
-        VolumeSlider.value = PlayerPrefs.GetFloat("Volume", 1);
+        volumeSlider.value = PlayerPrefs.GetFloat("Volume", 1);
 
         InititaliseUI();
 
@@ -59,7 +59,7 @@ public class ButtonControlTop : MonoBehaviour {
         PlayerPrefs.SetFloat("Volume", value);
         PlayerPrefs.Save();
 
-        VolumeControl.UpdateVolumeSettings();
+        volumeControl.UpdateVolumeSettings();
     }
 
     public void OnVolumeButtonClick()
@@ -67,18 +67,18 @@ public class ButtonControlTop : MonoBehaviour {
         int status = PlayerPrefs.GetInt("VolumeMute");
         if (status == 0)
         {
-            Volume.image.sprite = VolumeButtonOn;
+            volume.image.sprite = volumeButtonOn;
             PlayerPrefs.SetInt("VolumeMute", 1);
         }
         else
         {
-            Volume.image.sprite = VolumeButtonOff;
+            volume.image.sprite = volumeButtonOff;
             PlayerPrefs.SetInt("VolumeMute", 0);
         }
             
         PlayerPrefs.Save();
 
-        VolumeControl.UpdateVolumeSettings();
+        volumeControl.UpdateVolumeSettings();
     }
 
     public void OnToggleAutoRotate()
@@ -87,11 +87,11 @@ public class ButtonControlTop : MonoBehaviour {
 
         if (autoRotate)
         {
-            RotateModel.image.sprite = CommonUIComponents.instance.uIAtlas.GetSprite("1rotatetouch旋转");
+            rotateModel.image.sprite = CommonUIComponents.instance.uIAtlas.GetSprite("1rotatetouch旋转");
         }
         else
         {
-            RotateModel.image.sprite = CommonUIComponents.instance.uIAtlas.GetSprite("2rotate旋转");
+            rotateModel.image.sprite = CommonUIComponents.instance.uIAtlas.GetSprite("2rotate旋转");
         }
     }
 
@@ -108,21 +108,21 @@ public class ButtonControlTop : MonoBehaviour {
 
     public void OnToggleVR()
     {
-        RectTransform RT = InstructionPanel.GetComponent<RectTransform>();
+        RectTransform RT = instructionPanel.GetComponent<RectTransform>();
 
         RectTransformExtensions.SetLeft(RT, 1600);
         RectTransformExtensions.SetRight(RT, 100);
 
-        if (InstructionPanel.gameObject.activeInHierarchy)
+        if (instructionPanel.gameObject.activeInHierarchy)
         {
             if (DisplayInstructions.instance.GetWindowStatus() == 3)
-                InstructionPanel.HideWindow();
+                instructionPanel.HideWindow();
             else
-                InstructionPanel.ShowVROptions();
+                instructionPanel.ShowVROptions();
         }
         else
         {
-            InstructionPanel.ShowVROptions();
+            instructionPanel.ShowVROptions();
         }
     }
 
@@ -133,54 +133,54 @@ public class ButtonControlTop : MonoBehaviour {
 
     public void OnToggleLevel()
     {
-        RectTransform RT = InstructionPanel.GetComponent<RectTransform>();
+        RectTransform RT = instructionPanel.GetComponent<RectTransform>();
 
         RectTransformExtensions.SetLeft(RT, 0);
         RectTransformExtensions.SetRight(RT, 1700);
 
-        if (InstructionPanel.gameObject.activeInHierarchy)
+        if (instructionPanel.gameObject.activeInHierarchy)
         {
             if (DisplayInstructions.instance.GetWindowStatus() == 2)
-                InstructionPanel.HideWindow();
+                instructionPanel.HideWindow();
             else
-                InstructionPanel.ShowLevels();
+                instructionPanel.ShowLevels();
         }
         else
         {
-            InstructionPanel.ShowLevels();
+            instructionPanel.ShowLevels();
         }
     }
 
     public void OnToggleInstructions()
     {
-      
+        //TODO
     }
 
     public void OnToggleSettingsWindow()
     {
-        RectTransform RT = InstructionPanel.GetComponent<RectTransform>();
+        RectTransform RT = instructionPanel.GetComponent<RectTransform>();
 
         RectTransformExtensions.SetLeft(RT, 1700);
         RectTransformExtensions.SetRight(RT, 0);
 
-        if (InstructionPanel.gameObject.activeInHierarchy)
+        if (instructionPanel.gameObject.activeInHierarchy)
         {
             if (DisplayInstructions.instance.GetWindowStatus() == 1)
-                InstructionPanel.HideWindow();
+                instructionPanel.HideWindow();
             else
-                InstructionPanel.ShowSettings();
+                instructionPanel.ShowSettings();
         }
         else
         {
-            InstructionPanel.ShowSettings();
+            instructionPanel.ShowSettings();
         } 
     }
 
     private void Update()
     {
-        if (autoRotate && ModelHandler != null)
+        if (autoRotate && modelHandler != null)
         {
-            ModelHandler.RotateModel();
+            modelHandler.RotateModel();
         }
     }
 }
